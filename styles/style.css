@@ -1,10 +1,69 @@
-/* -------------top players style-------------------- */
+/* -----------------------------------------top players style---------------------------------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
 body{
     font-family: 'Poppins', sans-serif;
     background-color: #F3F1FF;
 }
+header{
+    width: 100%;
+    height: 94px;
+    background-color: #562EFF;
+    
+}
+
+/* --------------------------------------------Manu-Bar-Top------------------------------------------------- */
+.manubar-top{
+    display: flex;
+    justify-content:space-evenly;
+    
+}
+.topnav-left{
+   
+    
+    font-family: 'Poppins', sans-serif;
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding-top: 23px;
+    padding-left: 16px;
+    padding-bottom: 25px;
+    font-size: 24px;
+    font-weight: 500;
+}
+.topnav-left a{
+    text-decoration: none;
+    color: white;
+}
+.icon{
+  
+    padding-top: 30px;
+    padding-bottom: 25px;
+    
+    }
+.fa-lightbulb{
+    width: 55px;
+    height: 40px;
+
+}
+.topnav-right a{
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 35px 18px;
+    font-size: 16px;
+    font-weight: 400;
+
+}
+.icon-image{
+    height: 56px;
+    width: 56px;
+    padding: 20px 18px;
+}
+
+/*------------------------------------------------------- main body------------------------------------------------------------ */
 main{
     display: flex;
     flex-direction: column;
@@ -49,7 +108,7 @@ hr{
     margin: 16px;
 }
 
-/* ---------------------------------------top blog styles------------------------------------- */
+/* ----------------------------------------------top blog styles------------------------------------------------ */
 
 .blogs{
     display: grid;
@@ -82,14 +141,22 @@ hr{
     color: #562EFF;
 }
 
-/*------------------------------------ Latest Courses-------------------------- */
+/*--------------------------------------------- Latest Courses-------------------------------------------------- */
 .courses{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 24px;
+    box-shadow: #8a1414;
+}
+.course{
+  
+    background: #E5E5E5;
+  padding: 13px 10px;
+  box-shadow: 5px 10px #9F9F9F;
+    border-radius: 10px;
 }
 .course .course-banner img{
-    width: 224px;
+    width: 254px;
     height: 104px;
 }
 .course-info{
@@ -104,4 +171,42 @@ hr{
 .fa-star.empty{
     font-size: 13px;
     color: #aeaeaebd;
+}
+.course-duration{
+    color: #FF4A60;
+    background: #ff4a5f50;
+    width: 100px;
+    height: 20px;
+    border-radius: 15px;
+    padding: 3.5px 3.5px;
+    display: flex;
+    align-items: center;
+}
+.fa-clock{
+    padding: 10px;
+    
+}
+/* -----------------------------------------media queries----------------------------------------------------------- */
+
+@media only screen and (max-width:688px){
+    .container{
+        width: 100%;
+    }
+    .players, .blogs, .courses{
+    grid-template-columns: repeat(1, 1fr);
+        }
+        .player, .blog, .course{
+            flex-direction: column;
+        }
+}
+@media only screen and (min-width:689px) and (max-width:922px) {
+    .container{
+        width: 100%;
+    }
+    .players, .courses{
+        grid-template-columns: repeat(2, 1fr);
+            }
+            .player, .course{
+                flex-direction: column;
+            }   
 }
