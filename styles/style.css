@@ -7,7 +7,7 @@ body{
 }
 header{
     width: 100%;
-    height: 94px;
+    height: 100px;
     background-color: #562EFF;
     
 }
@@ -15,19 +15,17 @@ header{
 /* --------------------------------------------Manu-Bar-Top------------------------------------------------- */
 .manubar-top{
     display: flex;
-    justify-content:space-evenly;
+    justify-content:space-around;
     
 }
 .topnav-left{
    
-    
+    display: flex;
+    align-items: center;
     font-family: 'Poppins', sans-serif;
     float: left;
     color: #f2f2f2;
     text-align: center;
-    padding-top: 23px;
-    padding-left: 16px;
-    padding-bottom: 25px;
     font-size: 24px;
     font-weight: 500;
 }
@@ -36,7 +34,7 @@ header{
     color: white;
 }
 .icon{
-  
+ 
     padding-top: 30px;
     padding-bottom: 25px;
     
@@ -62,7 +60,10 @@ header{
     width: 56px;
     padding: 20px 18px;
 }
-
+#icon-title{
+    padding-top: 30px;
+    padding-bottom: 25px;
+}
 /*------------------------------------------------------- main body------------------------------------------------------------ */
 main{
     display: flex;
@@ -146,18 +147,20 @@ hr{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 24px;
-    box-shadow: #8a1414;
 }
 .course{
   
     background: #E5E5E5;
-  padding: 13px 10px;
-  box-shadow: 5px 10px #9F9F9F;
+    padding: 13px 10px;
+    box-shadow: 5px 10px #9F9F9F;
     border-radius: 10px;
 }
-.course .course-banner img{
+ .course-banner img{
     width: 254px;
     height: 104px;
+}
+.course-detail p{
+    color: tomato;
 }
 .course-info{
     display: flex;
